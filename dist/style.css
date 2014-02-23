@@ -17,6 +17,7 @@ header,
 footer {
   padding: 4em 0;
   text-align: center;
+  opacity: 1.0;
 }
 header {
   background: #626a6d;
@@ -34,7 +35,8 @@ h2 {
   margin-left: 6em;
 }
 section {
-  padding: 2em 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
 }
 section:after {

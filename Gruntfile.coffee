@@ -11,10 +11,15 @@ module.exports = (grunt) ->
       main:
         files:
           'dist/style.css':'src/style.less'
+
+    coffee: 
+      main: 
+        files: 
+          'dist/es.js': 'src/es.coffee'
     
     watch:
       main: 
-        files: ['src/style.less', 'src/index.html']
+        files: ['src/style.less', 'src/index.html', 'src/es.coffee']
         tasks: ['dist']
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -23,5 +28,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-copy'
 
-  grunt.registerTask 'dist', ['copy:main', 'less:main'] 
+  grunt.registerTask 'dist', ['copy:main', 'less:main', 'coffee:main'] 
   grunt.registerTask 'default', ['dist']
