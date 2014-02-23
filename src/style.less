@@ -1,0 +1,131 @@
+@import 'reset.css';
+
+@primary: #626A6D;
+@text: #181818;
+@lightAccent: #D7E8F0;
+@accent1: #8DCFED;
+@accent2: #41606D;
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  color: @text;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff3e;
+}
+
+header, footer {
+  padding: 4em 0;
+  text-align: center;
+}
+
+header {
+  background: @primary;
+
+  em {
+    color: @lightAccent;
+  }
+}
+
+h1 {
+  font-family: 'Raleway', monospace;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: 'Rokkitt', monospace;
+  font-size: 1.333em;
+  margin-left: 6em;
+}
+
+section {
+  .clearfix;
+
+  padding: 2em 0;
+
+  text-align: center;
+
+  h1 {
+    font-size: 2.3em;
+    color: #fff;
+  }
+}
+
+article {
+  .clearfix;
+
+  max-width: 960px;
+  margin: 2em auto;
+
+  text-align: left;
+
+  div {
+    .clearfix;
+
+    width: 33.3333333%;
+    float: left;
+    padding: 0 1em;
+
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+dt, dd {
+  margin-top: 0.5em;
+}
+
+dt {
+  float: left;
+  clear: left;
+}
+
+dd {
+  float: right;
+  clear: right;
+}
+
+#contact {
+  background: @lightAccent;
+
+  article {
+    text-align: center;
+  }
+}
+
+#services {
+  background: @accent1;
+}
+
+#skills {
+  background: @accent2;
+}
+
+#clients {
+  background: @accent1;
+}
+
+#also {
+  background: @lightAccent;
+}
+
+.star {
+  height: 1em;
+  margin-top: -0.9em;
+}
+
+footer {
+  background: @primary;
+}
