@@ -4,6 +4,10 @@
   display: table;
   clear: both;
 }
+.fullwidth {
+  width: 100%;
+  margin-bottom: 16px;
+}
 body {
   font-size: 18px;
   font-family: 'Lato', sans-serif;
@@ -94,6 +98,10 @@ dd {
   float: right;
   clear: right;
 }
+#contact img,
+#also img {
+  max-width: 100%;
+}
 #contact,
 #also {
   background: #d7e8f0;
@@ -128,7 +136,19 @@ footer {
   text-align: center;
   padding: 32px 0;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 816px) {
+  #services .three-col div,
+  #clients .two-col div {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  dt,
+  dd {
+    clear: both;
+    float: left;
+  }
+}
+@media all and (max-width: 640px) {
   h1,
   h2 {
     margin: 0;
@@ -137,18 +157,18 @@ footer {
   section {
     text-align: left;
   }
-  #contact img {
-    max-width: 100%;
-  }
-  article.three-col div,
-  article.two-col div {
+}
+@media all and (max-width: 440px) {
+  #skills .three-col div {
     width: 100%;
     margin-bottom: 16px;
   }
-  #contact .three-col div {
-    width: 33.333333%;
+  dt {
+    float: left;
+    clear: left;
   }
-  #skills .three-col div {
-    max-width: 360px;
+  dd {
+    float: right;
+    clear: right;
   }
 }

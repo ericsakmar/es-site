@@ -18,6 +18,11 @@
   }
 }
 
+.fullwidth {
+  width: 100%;
+  margin-bottom: @pad;
+}
+
 body {
   font-size: 18px;
   font-family: 'Lato', sans-serif;
@@ -123,6 +128,12 @@ dd {
 }
 
 #contact, #also {
+  img {
+    max-width: 100%;
+  }
+}
+
+#contact, #also {
   background: @lightAccent;
 
   h1 {
@@ -161,7 +172,18 @@ footer {
   padding: @padBig 0;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 816px) {
+  #services .three-col div, #clients .two-col div {
+    .fullwidth;
+  }
+
+  dt, dd {
+    clear: both;
+    float: left;
+  }
+}
+
+@media all and (max-width: 640px) {
   h1, h2 {
     margin: 0;
     padding: 0 @pad;
@@ -170,27 +192,20 @@ footer {
   section {
     text-align: left;
   }
+}
 
-  #contact {
-    img {
-      max-width: 100%;
-    }
-  }
-
-  article {
-    &.three-col, &.two-col {
-      div {
-        width: 100%;
-        margin-bottom: @pad;
-      }
-    }
-  }
-
-  #contact .three-col div {
-    width: 33.333333%;
-  }
-
+@media all and (max-width: 440px) {
   #skills .three-col div {
-    max-width: 360px;
+    .fullwidth;
+  }
+
+  dt {
+    float: left;
+    clear: left;
+  }
+
+  dd {
+    float: right;
+    clear: right;
   }
 }
