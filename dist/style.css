@@ -13,11 +13,9 @@ a {
   text-decoration: none;
   color: #ffff3e;
 }
-header,
-footer {
-  padding: 4em 0;
+header {
+  padding: 144px 0;
   text-align: center;
-  opacity: 1.0;
 }
 header {
   background: #626a6d;
@@ -26,17 +24,16 @@ header em {
   color: #d7e8f0;
 }
 h1 {
-  font-family: 'Raleway', monospace;
+  font-family: 'Raleway', sans-serif;
   font-size: 4em;
 }
 h2 {
-  font-family: 'Rokkitt', monospace;
+  font-family: 'Arvo', monospace;
   font-size: 1.333em;
   margin-left: 6em;
 }
 section {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 72px 0;
   text-align: center;
 }
 section:after {
@@ -45,12 +42,13 @@ section:after {
   clear: both;
 }
 section h1 {
+  font-family: 'Raleway', sans-serif;
   font-size: 2.3em;
-  color: #fff;
+  color: #d7e8f0;
 }
 article {
   max-width: 960px;
-  margin: 2em auto;
+  margin: 32px auto;
   text-align: left;
 }
 article:after {
@@ -58,22 +56,35 @@ article:after {
   display: table;
   clear: both;
 }
+article h1 {
+  font-size: 1.5em;
+  font-family: 'Arvo', monospace;
+  padding: 0;
+}
 article div {
-  width: 33.3333333%;
   float: left;
-  padding: 0 1em;
+  padding: 0 16px;
 }
 article div:after {
   content: "";
   display: table;
   clear: both;
 }
-article div h1 {
-  font-size: 1.5em;
+article.three-col div {
+  width: 33.3333333%;
+}
+article.two-col div {
+  width: 50%;
+  margin-bottom: 16px;
+}
+aside {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 dt,
 dd {
-  margin-top: 0.5em;
+  margin-top: 8px;
 }
 dt {
   float: left;
@@ -83,14 +94,24 @@ dd {
   float: right;
   clear: right;
 }
-#contact {
+#contact,
+#also {
   background: #d7e8f0;
 }
-#contact article {
+#contact h1,
+#also h1 {
+  color: #41606d;
+}
+#contact article,
+#also article {
   text-align: center;
 }
 #services {
   background: #8dcfed;
+}
+#services h1,
+#services h2 {
+  color: #d7e8f0;
 }
 #skills {
   background: #41606d;
@@ -98,13 +119,36 @@ dd {
 #clients {
   background: #8dcfed;
 }
-#also {
-  background: #d7e8f0;
-}
 .star {
   height: 1em;
   margin-top: -0.9em;
 }
 footer {
   background: #626a6d;
+  text-align: center;
+  padding: 32px 0;
+}
+@media all and (max-width: 480px) {
+  h1,
+  h2 {
+    margin: 0;
+    padding: 0 16px;
+  }
+  section {
+    text-align: left;
+  }
+  #contact img {
+    max-width: 100%;
+  }
+  article.three-col div,
+  article.two-col div {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  #contact .three-col div {
+    width: 33.333333%;
+  }
+  #skills .three-col div {
+    max-width: 360px;
+  }
 }

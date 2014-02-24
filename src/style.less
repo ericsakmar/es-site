@@ -6,6 +6,10 @@
 @accent1: #8DCFED;
 @accent2: #41606D;
 
+@padSmall: 8px;
+@pad: 16px;
+@padBig: 32px;
+
 .clearfix {
   &:after {
     content: "";
@@ -25,10 +29,9 @@ a {
   color: #ffff3e;
 }
 
-header, footer {
-  padding: 4em 0;
+header {
+  padding: 144px 0;
   text-align: center;
-  opacity: 1.0;
 }
 
 header {
@@ -40,12 +43,12 @@ header {
 }
 
 h1 {
-  font-family: 'Raleway', monospace;
+  font-family: 'Raleway', sans-serif;
   font-size: 4em;
 }
 
 h2 {
-  font-family: 'Rokkitt', monospace;
+  font-family: 'Arvo', monospace;
   font-size: 1.333em;
   margin-left: 6em;
 }
@@ -53,14 +56,14 @@ h2 {
 section {
   .clearfix;
 
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 72px 0;
 
   text-align: center;
 
   h1 {
+    font-family: 'Raleway', sans-serif;
     font-size: 2.3em;
-    color: #fff;
+    color: @lightAccent;
   }
 }
 
@@ -68,25 +71,45 @@ article {
   .clearfix;
 
   max-width: 960px;
-  margin: 2em auto;
+  margin: @padBig auto;
 
   text-align: left;
+
+  h1 {
+    font-size: 1.5em;
+    font-family: 'Arvo', monospace;
+    padding: 0;
+  }
 
   div {
     .clearfix;
 
-    width: 33.3333333%;
     float: left;
-    padding: 0 1em;
+    padding: 0 @pad;
+  }
 
-    h1 {
-      font-size: 1.5em;
+  &.three-col {
+    div {
+      width: 33.3333333%;
+    }
+  }
+
+  &.two-col {
+    div {
+      width: 50%;
+      margin-bottom: @pad;
     }
   }
 }
 
+aside {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 @pad;
+}
+
 dt, dd {
-  margin-top: 0.5em;
+  margin-top: 8px;
 }
 
 dt {
@@ -99,8 +122,12 @@ dd {
   clear: right;
 }
 
-#contact {
+#contact, #also {
   background: @lightAccent;
+
+  h1 {
+    color: @accent2;
+  }
 
   article {
     text-align: center;
@@ -109,6 +136,10 @@ dd {
 
 #services {
   background: @accent1;
+
+  h1, h2 {
+    color: @lightAccent;
+  }
 }
 
 #skills {
@@ -119,10 +150,6 @@ dd {
   background: @accent1;
 }
 
-#also {
-  background: @lightAccent;
-}
-
 .star {
   height: 1em;
   margin-top: -0.9em;
@@ -130,4 +157,40 @@ dd {
 
 footer {
   background: @primary;
+  text-align: center;
+  padding: @padBig 0;
+}
+
+@media all and (max-width: 480px) {
+  h1, h2 {
+    margin: 0;
+    padding: 0 @pad;
+  }
+
+  section {
+    text-align: left;
+  }
+
+  #contact {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  article {
+    &.three-col, &.two-col {
+      div {
+        width: 100%;
+        margin-bottom: @pad;
+      }
+    }
+  }
+
+  #contact .three-col div {
+    width: 33.333333%;
+  }
+
+  #skills .three-col div {
+    max-width: 360px;
+  }
 }
