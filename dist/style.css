@@ -137,10 +137,12 @@ footer {
   padding: 32px 0;
 }
 @media all and (max-width: 816px) {
-  #services .three-col div,
   #clients .two-col div {
     width: 100%;
     margin-bottom: 16px;
+  }
+  section {
+    padding: inherit 32px;
   }
   dt,
   dd {
@@ -156,6 +158,10 @@ footer {
   }
   section {
     text-align: left;
+  }
+  #services .three-col div {
+    width: 100%;
+    margin-bottom: 16px;
   }
 }
 @media all and (max-width: 440px) {
